@@ -1,0 +1,15 @@
+.filter-heading {
+  font-size: 25px;
+}
+.filter-item {
+  margin-top: 10px;
+}
+.filter-label {
+  margin-left: 8px;
+}
+.check-box {
+  cursor: pointer;
+}
+.radio-input {
+  cursor: pointer;
+}

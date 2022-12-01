@@ -1,0 +1,19 @@
+.similar-job-item-bg-container {
+  width: 33%;
+  margin-bottom: 30px;
+}
+.job-item-details-main-container {
+  background-color: #202020;
+  width: 90%;
+  border-radius: 20px;
+  padding: 40px;
+}
+.similar-job-title {
+  font-size: 20px;
+}
+.similar-job-description {
+  font-size: 16px;
+}
+.job-feature {
+  font-size: 11px;
+}

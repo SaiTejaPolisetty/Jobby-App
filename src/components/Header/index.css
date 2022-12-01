@@ -1,0 +1,38 @@
+.navbar {
+  background-color: #272727;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+
+  width: 100%;
+}
+.route-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: none;
+}
+.link {
+  text-decoration: none;
+}
+.link-text {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 15px;
+}
+.header-logo {
+  height: 40px;
+}
+.logout-btn {
+  background-color: #6366f1;
+  color: white;
+  /* font-size: 18px; */
+  font-weight: 500;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+}

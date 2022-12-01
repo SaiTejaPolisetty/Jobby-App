@@ -1,0 +1,22 @@
+.skill-item-bg-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 30px 0px;
+}
+.skill-details-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.skill-name {
+  font-weight: 500;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.skill-image {
+  height: 70px;
+  width: 60px;
+}
