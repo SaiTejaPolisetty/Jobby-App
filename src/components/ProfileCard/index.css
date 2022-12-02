@@ -11,6 +11,11 @@
   align-items: center;
   padding: 20px;
 }
+@media (max-width: 576px) {
+  .profile-card-bg-container {
+    width: 100%;
+  }
+}
 .profile-name {
   color: #6366f1;
 }

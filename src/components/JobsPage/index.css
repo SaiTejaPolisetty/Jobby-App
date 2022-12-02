@@ -27,9 +27,19 @@ ul {
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 576px) {
+  .jobs-page-body {
+    flex-direction: column;
+  }
+}
 .filter-container {
   flex-shrink: 0px;
   padding: 0px 30px;
+}
+@media (max-width: 576px) {
+  .filter-container {
+    padding: 0px;
+  }
 }
 .job-items-container {
   flex-grow: 1;
@@ -49,6 +59,19 @@ ul {
   width: 40%;
   display: flex;
   height: 40px;
+}
+.filter-search {
+  display: none;
+}
+@media (max-width: 576px) {
+  .searchForm {
+    display: none;
+  }
+  .filter-search {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .search-btn {
   border: none;

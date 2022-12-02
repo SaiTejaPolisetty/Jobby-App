@@ -6,6 +6,12 @@
 
   margin: 30px 0px;
 }
+
+@media (max-width: 576px) {
+  .skill-item-bg-container {
+    width: 50%;
+  }
+}
 .skill-details-container {
   display: flex;
   align-items: center;
@@ -19,4 +25,15 @@
 .skill-image {
   height: 70px;
   width: 60px;
+}
+
+@media (max-width: 576px) {
+  .skill-name {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .skill-image {
+    height: 50px;
+    width: 40px;
+  }
 }

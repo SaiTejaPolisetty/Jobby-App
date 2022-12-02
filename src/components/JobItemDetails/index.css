@@ -20,6 +20,7 @@
   list-style-type: none;
   padding: 0px;
 }
+
 .life-at-company-container {
   display: flex;
   justify-content: space-between;
@@ -35,8 +36,31 @@
 .life-at-company-description {
   font-size: 20px;
 }
+@media (max-width: 576px) {
+  .job-item-details {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .life-at-company-container {
+    flex-direction: column;
+  }
+  .life-at-company-text-container {
+    width: 100%;
+  }
+  .life-at-company-description {
+    font-size: 16px;
+  }
+  .life-at-company-image {
+    width: 100%;
+  }
+}
 .job-item-details-page-body {
   flex-direction: column;
+}
+.similar-job-section-heading-container {
+  width: 80%;
+  align-self: center;
 }
 .similar-jobs-container {
   display: flex;
@@ -46,4 +70,10 @@
   width: 80%;
 
   align-self: center;
+}
+@media (max-width: 576px) {
+  .similar-jobs-container {
+    flex-direction: column;
+    width: 90%;
+  }
 }

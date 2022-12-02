@@ -2,11 +2,20 @@
   width: 33%;
   margin-bottom: 30px;
 }
+
 .job-item-details-main-container {
   background-color: #202020;
   width: 90%;
   border-radius: 20px;
   padding: 40px;
+}
+@media (max-width: 576px) {
+  .similar-job-item-bg-container {
+    width: 100%;
+  }
+  .job-item-details-main-container {
+    width: 100%;
+  }
 }
 .similar-job-title {
   font-size: 20px;

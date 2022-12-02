@@ -143,7 +143,7 @@ class JobItemDetails extends Component {
   )
 
   renderLoader = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" /* testid="loader" */>
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -234,7 +234,9 @@ class JobItemDetails extends Component {
             />
           </div>
         </div>
-        <h1 className="similar-jobs">Similar Jobs</h1>
+        <div className="similar-job-section-heading-container">
+          <h1 className="similar-jobs">Similar Jobs</h1>
+        </div>
         <ul className="similar-jobs-container">
           {similarJobs.map(obj => (
             <SimilarJobItem similarJobDetails={obj} key={obj.id} />

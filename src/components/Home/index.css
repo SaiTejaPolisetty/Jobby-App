@@ -10,8 +10,20 @@
   flex-grow: 1;
   padding: 20px;
 }
+
 .home-text-container {
   width: 60%;
+}
+
+@media (max-width: 576px) {
+  .home-body {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .home-text-container {
+    width: 80%;
+  }
 }
 .home-heading {
   color: white;
@@ -30,4 +42,22 @@
   font-weight: bold;
   padding: 10px 30px;
   color: white;
+}
+@media (max-width: 576px) {
+  .home-heading {
+    color: white;
+    font-size: 30px;
+  }
+  .home-description {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .jobs-btn {
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    color: white;
+  }
 }

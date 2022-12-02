@@ -16,6 +16,13 @@
   padding: 20px;
   align-items: center;
 }
+
+@media (max-width: 576px) {
+  .login-card {
+    width: 90%;
+  }
+}
+
 .label {
   color: white;
   font-size: 16px;

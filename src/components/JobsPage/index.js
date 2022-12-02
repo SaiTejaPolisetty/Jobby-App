@@ -184,7 +184,7 @@ class JobsPage extends Component {
   )
 
   renderLoader = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" /* testid="loader" */>
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -205,7 +205,7 @@ class JobsPage extends Component {
             className="search-btn"
             type="button"
             onClick={this.searchFunc}
-            testid="searchButton"
+            /*  testid="searchButton" */
           >
             <BsSearch className="search-icon" />
           </button>
@@ -224,7 +224,7 @@ class JobsPage extends Component {
   }
 
   render() {
-    const {apiStatus} = this.state
+    const {apiStatus, searchInput} = this.state
     // console.log(selectedEmploymentType)
 
     let result
@@ -253,6 +253,23 @@ class JobsPage extends Component {
         <div className="responsive-container">
           <div className="jobs-page-body">
             <div className="filter-container">
+              <form className="searchForm filter-search">
+                <input
+                  type="search"
+                  value={searchInput}
+                  onChange={this.setSearchValue}
+                  placeholder="Search"
+                  className="search-input"
+                />
+                <button
+                  className="search-btn"
+                  type="button"
+                  onClick={this.searchFunc}
+                  /*  testid="searchButton" */
+                >
+                  <BsSearch className="search-icon" />
+                </button>
+              </form>
               <JobFilterGroups
                 employmentTypesList={employmentTypesList}
                 salaryRangesList={salaryRangesList}

@@ -1,5 +1,11 @@
 import {withRouter, Link} from 'react-router-dom'
 
+import {AiFillHome} from 'react-icons/ai'
+
+import {FiLogOut} from 'react-icons/fi'
+
+import {BsFillBriefcaseFill} from 'react-icons/bs'
+
 import Cookies from 'js-cookie'
 
 import './index.css'
@@ -12,7 +18,7 @@ const Header = props => {
   }
   return (
     <nav className="navbar">
-      <ul className="route-list">
+      <ul className="nav-list">
         <li>
           <Link to="/">
             <img
@@ -23,7 +29,7 @@ const Header = props => {
           </Link>
         </li>
 
-        <li>
+        <li className="route-list">
           <Link className="link" to="/">
             <p className="link-text">Home</p>
           </Link>
@@ -36,6 +42,35 @@ const Header = props => {
         <li>
           <button className="logout-btn" onClick={logoutFunc} type="button">
             Logout
+          </button>
+        </li>
+      </ul>
+
+      <ul className="nav-list-sm">
+        <li>
+          <Link to="/">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+              alt="website logo"
+              className="header-logo"
+            />
+          </Link>
+        </li>
+
+        <li className="route-list">
+          <Link className="link" to="/">
+            <AiFillHome className="nav-link-logos" />
+          </Link>
+        </li>
+        <li className="route-list">
+          <Link to="/jobs" className="link">
+            <BsFillBriefcaseFill className="nav-link-logos" />
+          </Link>
+        </li>
+
+        <li>
+          <button className="logout-btn" onClick={logoutFunc} type="button">
+            <FiLogOut className="nav-link-logos" />
           </button>
         </li>
       </ul>

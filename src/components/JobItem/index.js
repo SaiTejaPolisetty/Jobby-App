@@ -42,7 +42,7 @@ const JobItem = props => {
             </div>
           </div>
           <div className="job-details-container">
-            <div className="logo-container">
+            <div className="two-logos-container">
               <div className="logo-container space">
                 <TiLocation className="location-icon" />
                 <p className="job-feature">{location}</p>
