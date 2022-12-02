@@ -109,6 +109,7 @@ class JobsPage extends Component {
       this.setState({
         apiStatus: apiStatusConstants.success,
         apiResponse: processedData,
+        searchValue: '',
       })
     } else {
       this.setState({

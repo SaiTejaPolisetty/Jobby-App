@@ -52,13 +52,14 @@ class ProfileCard extends Component {
 
   renderSuccessView = () => {
     const {profileDetails} = this.state
-    const {name, ProfileImageUrl, ShortBio} = profileDetails
+    /* const {name, ProfileImageUrl, ShortBio} = profileDetails */
+    const {ProfileImageUrl} = profileDetails
 
     return (
       <div className="profile-card">
         <img src={ProfileImageUrl} alt="profile" className="profile-img" />
-        <h1 className="profile-name">{name}</h1>
-        <p className="profile-desc">{ShortBio}</p>
+        <h1 className="profile-name">Sai Teja</h1>
+        <p className="profile-desc">An aspiring full stack developer</p>
       </div>
     )
   }
