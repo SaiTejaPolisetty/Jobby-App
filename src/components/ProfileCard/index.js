@@ -64,7 +64,7 @@ class ProfileCard extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

@@ -179,12 +179,12 @@ class JobsPage extends Component {
         className="failure-img"
       />
       <h1>No Jobs Found</h1>
-      <p>We could not find any jobs.Try other filters.</p>
+      <p>We could not find any jobs. Try other filters</p>
     </div>
   )
 
   renderLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -205,6 +205,7 @@ class JobsPage extends Component {
             className="search-btn"
             type="button"
             onClick={this.searchFunc}
+            testid="searchButton"
           >
             <BsSearch className="search-icon" />
           </button>

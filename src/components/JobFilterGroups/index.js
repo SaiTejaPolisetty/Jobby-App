@@ -35,8 +35,11 @@ const PackageFilter = props => {
         value={salaryRangeId}
         name="packageFilter"
         className="radio-input"
+        id={salaryRangeId}
       />
-      <label className="filter-label">{label}</label>
+      <label className="filter-label" htmlFor={salaryRangeId}>
+        {label}
+      </label>
     </li>
   )
 }
@@ -54,7 +57,7 @@ const JobFilterGroups = props => {
       <ProfileCard />
       <hr className="hr-line" />
       <div className="filter-types-container">
-        <h1 className="filter-heading">Types of Employment</h1>
+        <h1 className="filter-heading">Type of Employment</h1>
         <ul className="filter-list">
           {employmentTypesList.map(obj => (
             <CheckBoxFilter
