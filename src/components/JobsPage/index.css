@@ -115,3 +115,6 @@ ul {
   align-items: center;
   flex-grow: 1;
 }
+.failure-img {
+  width: 60%;
+}
