@@ -6,7 +6,7 @@ import './index.css'
 
 import Cookies from 'js-cookie'
 
-console.log("Hello world i am sai teja")
+console.log('Hello world i am sai teja')
 
 class LoginForm extends Component {
   state = {username: '', password: '', apiResponse: ''}
