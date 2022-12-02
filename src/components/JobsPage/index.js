@@ -109,7 +109,6 @@ class JobsPage extends Component {
       this.setState({
         apiStatus: apiStatusConstants.success,
         apiResponse: processedData,
-        searchValue: '',
       })
     } else {
       this.setState({
@@ -123,11 +122,20 @@ class JobsPage extends Component {
     /* this.fetchJobs(searchValue) */
     if (searchInput !== '') {
       this.setState({searchValue: searchInput}, this.fetchJobs)
+    } else {
+      this.setState({searchValue: ''}, this.fetchJobs)
     }
   }
 
   setSearchValue = event => {
-    this.setState({searchInput: event.target.value})
+    if (event.target.value === '') {
+      this.setState(
+        {searchValue: '', searchInput: event.target.value},
+        this.fetchJobs,
+      )
+    } else {
+      this.setState({searchInput: event.target.value})
+    }
   }
 
   setEmploymentType = event => {
@@ -194,7 +202,7 @@ class JobsPage extends Component {
     const {apiResponse, searchInput} = this.state
     return (
       <div className="job-items-container">
-        <form className="searchForm">
+        <div className="searchForm">
           <input
             type="search"
             value={searchInput}
@@ -210,7 +218,7 @@ class JobsPage extends Component {
           >
             <BsSearch className="search-icon" />
           </button>
-        </form>
+        </div>
         {apiResponse.length === 0 ? (
           this.renderNoJobsView()
         ) : (
@@ -254,7 +262,7 @@ class JobsPage extends Component {
         <div className="responsive-container">
           <div className="jobs-page-body">
             <div className="filter-container">
-              <form className="searchForm filter-search">
+              <div className="searchForm filter-search">
                 <input
                   type="search"
                   value={searchInput}
@@ -270,7 +278,7 @@ class JobsPage extends Component {
                 >
                   <BsSearch className="search-icon" />
                 </button>
-              </form>
+              </div>
               <JobFilterGroups
                 employmentTypesList={employmentTypesList}
                 salaryRangesList={salaryRangesList}
